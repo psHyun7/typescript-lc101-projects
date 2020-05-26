@@ -6,9 +6,6 @@ var SpaceLocation = /** @class */ (function () {
         this.name = name;
         this.kilometersAway = kilometersAway;
     }
-    SpaceLocation.prototype.printDaysToLocation = function (location) {
-        console.log(this.name + " would take " + this.getDaysToLocation(location.kilometersAway) + " days to get to " + location.name + ".");
-    };
     return SpaceLocation;
 }());
 exports.SpaceLocation = SpaceLocation;
