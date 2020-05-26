@@ -1,11 +1,12 @@
-import { Payload } from './Payload'
-import { Astronaut } from './Astronaut'
+import { Payload } from './Payload';
+import { Astronaut } from './Astronaut';
+import { Cargo } from './Cargo';
 
 export class Rocket {
    name : string;
    totalCapacityKg : number;
-   cargoItems : [];
-   astronauts : [];
+   cargoItems : Cargo[] = [];
+   astronauts : Astronaut[] = [];
 
    constructor (name : string, totalCapicityKg : number) {
       this.name = name;
@@ -28,7 +29,7 @@ export class Rocket {
       return this.currentMassKg() + item.massKg <= this.totalCapacityKg;
    }
 
-   addCargo( cargo : Payload ): boolean {
+   addCargo( cargo : Cargo ): boolean {
       if (this.canAdd(cargo)) {
          this.cargoItems.push(cargo);
          return true;

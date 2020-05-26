@@ -2,6 +2,8 @@
 exports.__esModule = true;
 var Rocket = /** @class */ (function () {
     function Rocket(name, totalCapicityKg) {
+        this.cargoItems = [];
+        this.astronauts = [];
         this.name = name;
         this.totalCapacityKg = totalCapicityKg;
     }
